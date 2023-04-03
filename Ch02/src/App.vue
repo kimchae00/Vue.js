@@ -1,15 +1,15 @@
 <template>
   <h3>Ch02. Vue Directive 실습</h3>
-  
+
   <h4>1) v-text</h4>
   <p v-text="tit1"></p>
   <p>{{ tit2 }}</p>
-  <hr/>
+  <hr />
 
   <h4>2) v-show</h4>
   <p v-show="result1">show directive1</p>
   <p v-show="result2">show directive2</p>
-  <hr/>
+  <hr />
 
   <h4>3) v-if</h4>
   <p v-if="result1">if directive1</p>
@@ -24,7 +24,7 @@
 
   <p v-if="tit3">{{ tit3 }}</p>
   <p v-else>tit3 empty...</p>
-  <hr/>
+  <hr />
 
   <h4>4) v-for</h4>
   <ul>
@@ -46,7 +46,7 @@
       <td>{{ person.age }}</td>
     </tr>
   </table>
-  <hr/>
+  <hr />
 
   <h4>5) v-on</h4>
   <h4>click 예제</h4>
@@ -72,15 +72,15 @@
     <table border="1">
       <tr>
         <td>아이디</td>
-        <td><input type="text" name="uid"></td>
+        <td><input type="text" name="uid" /></td>
       </tr>
       <tr>
         <td>이름</td>
-        <td><input type="text" name="name"></td>
+        <td><input type="text" name="name" /></td>
       </tr>
       <tr>
         <td>나이</td>
-        <td><input type="number" name="age"></td>
+        <td><input type="number" name="age" /></td>
       </tr>
       <tr>
         <td>주소</td>
@@ -101,22 +101,22 @@
       </tr>
     </table>
   </form>
-  <hr/>
+  <hr />
 
   <h4>6) v-bind (단방향)</h4>
-  <img v-bind:src="path1">
-  <img v-bind:src="path2">
-  
+  <img v-bind:src="path1" />
+  <img v-bind:src="path2" />
+
   <a :href="url1">네이버</a>
   <a :href="url2">카카오</a>
 
   <button @click="oneClick" :disabled="isActive">한번만 클릭되는 버튼</button>
-  <hr/>
+  <hr />
 
   <h4>7) v-model (양방향)</h4>
   <h4>input</h4>
   <p>이름 : {{ name }}</p>
-  <input type="text" v-model="name" placeholder="이름 입력">
+  <input type="text" v-model="name" placeholder="이름 입력" />
 
   <h4>textarea</h4>
   <p>{{ message }}</p>
@@ -125,17 +125,17 @@
 
   <h4>checkbox</h4>
   <p>
-    <input type="checkbox" v-model="isChecked">
+    <input type="checkbox" v-model="isChecked" />
     체크상태 : {{ isChecked }}
   </p>
 
   <p>
-    <label><input type="checkbox" value="등산" v-model="hobbies">등산</label>
-    <label><input type="checkbox" value="영화" v-model="hobbies">영화</label>
-    <label><input type="checkbox" value="독서" v-model="hobbies">독서</label>
-    <label><input type="checkbox" value="운동" v-model="hobbies">운동</label>
-    <label><input type="checkbox" value="게임" v-model="hobbies">게임</label>
-    <br>
+    <label><input type="checkbox" value="등산" v-model="hobbies" />등산</label>
+    <label><input type="checkbox" value="영화" v-model="hobbies" />영화</label>
+    <label><input type="checkbox" value="독서" v-model="hobbies" />독서</label>
+    <label><input type="checkbox" value="운동" v-model="hobbies" />운동</label>
+    <label><input type="checkbox" value="게임" v-model="hobbies" />게임</label>
+    <br />
     선택값 : {{ hobbies }}
   </p>
 
@@ -154,15 +154,15 @@
     <table border="1">
       <tr>
         <td>아이디</td>
-        <td><input type="text" v-model="user.uid"></td>
+        <td><input type="text" v-model="user.uid" /></td>
       </tr>
       <tr>
         <td>이름</td>
-        <td><input type="text" v-model="user.name"></td>
+        <td><input type="text" v-model="user.name" /></td>
       </tr>
       <tr>
         <td>나이</td>
-        <td><input type="number" v-model="user.age"></td>
+        <td><input type="number" v-model="user.age" /></td>
       </tr>
       <tr>
         <td>주소</td>
@@ -183,7 +183,7 @@
       </tr>
     </table>
   </form>
-  <hr/>
+  <hr />
 </template>
 
 <script>
@@ -191,17 +191,17 @@
  * 날짜 : 2023/04/03
  * 이름 : 김채영
  * 내용 : Ch02. Vue Directive 실습
- * 
+ *
  * 프로젝트 생성/실행
  *  - npm init vite-app Ch02
  *  - cd Ch02
  *  - npm install
  *  - npm run dev
- * 
+ *
  */
 
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
       tit1: "Hello",
@@ -210,19 +210,19 @@ export default {
       result1: true,
       result2: false,
       score: 86,
-      cities: ['서울', '대전', '대구', '부산', '광주'],
+      cities: ["서울", "대전", "대구", "부산", "광주"],
       persons: [
-        {uid: 'a101', name: '김유신', age: 23},
-        {uid: 'a102', name: '김춘추', age: 21},
-        {uid: 'a103', name: '장보고', age: 33},
-        {uid: 'a104', name: '강감찬', age: 43},
-        {uid: 'a105', name: '이순신', age: 53}
+        { uid: "a101", name: "김유신", age: 23 },
+        { uid: "a102", name: "김춘추", age: 21 },
+        { uid: "a103", name: "장보고", age: 33 },
+        { uid: "a104", name: "강감찬", age: 43 },
+        { uid: "a105", name: "이순신", age: 53 },
       ],
       count: 0,
-      path1: '/img/flower1.jpg',
-      path2: '/img/flower2.jpg',
-      url1: 'https://naver.com',
-      url2: 'https://kakao.com',
+      path1: "/img/flower1.jpg",
+      path2: "/img/flower2.jpg",
+      url1: "https://naver.com",
+      url2: "https://kakao.com",
       isActive: false,
       name: "",
       message: "",
@@ -238,22 +238,22 @@ export default {
     };
   }, // data end
   methods: {
-    handler1: function(){
-      alert('button1 click!!!');
+    handler1: function () {
+      alert("button1 click!!!");
     },
-    handler2: function(value){
-      alert('button2 click : ' + value);
+    handler2: function (value) {
+      alert("button2 click : " + value);
     },
-    handler3: function(e){
-      alert('button3 click : ' + e);
+    handler3: function (e) {
+      alert("button3 click : " + e);
     },
-    countHandler: function(){
+    countHandler: function () {
       this.count++;
     },
-    changeHandler: function(e){
+    changeHandler: function (e) {
       alert(e.target.value);
     },
-    submitHandler1: function(e){
+    submitHandler1: function (e) {
       let uid = e.target.elements.uid.value;
       let name = e.target.elements.name.value;
       let age = e.target.elements.age.value;
@@ -264,14 +264,14 @@ export default {
       console.log("age : " + age);
       console.log("addr : " + addr);
     },
-    submitHandler2: function(){
+    submitHandler2: function () {
       console.log("uid : " + this.user.uid);
       console.log("name : " + this.user.name);
       console.log("age : " + this.user.age);
       console.log("addr : " + this.user.addr);
     },
-    oneClick: function(){
-      alert('한번만 클릭할 수 있습니다.');
+    oneClick: function () {
+      alert("한번만 클릭할 수 있습니다.");
       this.isActive = true;
     },
   }, // methods end
