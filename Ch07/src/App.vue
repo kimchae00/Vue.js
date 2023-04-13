@@ -27,6 +27,9 @@
  *  - post : 컨트롤러에 @RequestBody 추가해야 데이터를 받음
  *  - 파라미터에 변수 참조하려면 ""가 아닌 ``로 쓰기
  *
+ * JWT
+ *  - 토큰 확인 : https://jwt.io/
+ *  - 핵심내용 : 스프링 Voard - JWTUtil / UserController
  */
 </script>
 
