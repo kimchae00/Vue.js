@@ -21,10 +21,12 @@
 
 <script setup>
 import { useRouter } from "vue-router";
+import { useStore } from "vuex";
 import { reactive } from "vue";
 import axios from "axios";
 
 const router = useRouter();
+const store = useStore();
 
 const user = reactive({
   uid: "",
@@ -32,17 +34,14 @@ const user = reactive({
 });
 
 const loginProc = function () {
-  axios
-    .post("http://localhost:8080/Voard/user/login", user)
+  // 로그인 요청
+  store
+    .dispatch("login", user)
     .then((response) => {
-      console.log(response);
-      const token = response.data.accessToken;
-
-      localStorage.setItem("accessToken", token); // 로컬저장소에 저장
+      // 로그인 성공 전환(store에서는 router 처리할 수 없음)
       router.push("/jwt/loginSuccess");
     })
     .catch((error) => {
-      console.log(error);
       alert("로그인 실패");
     });
 };
