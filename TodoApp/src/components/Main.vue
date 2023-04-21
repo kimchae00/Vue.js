@@ -1,10 +1,13 @@
 <template>
   <main>
-    <ul></ul>
+    <ul>
+      <Item />
+    </ul>
   </main>
 </template>
 
 <script>
+// template에 v-bind:todo v-bind 생략가능
 import Item from "./Item.vue";
 
 export default {
