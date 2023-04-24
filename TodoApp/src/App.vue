@@ -9,6 +9,7 @@ import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
 import Footer from "./components/Footer.vue";
 import { useStore } from "vuex";
+import { onBeforeMount } from "vue";
 
 export default {
   name: "App",
@@ -23,6 +24,10 @@ export default {
     const addTodoHandler = function (value) {
       store.dispatch("addTodo", value);
     };
+
+    onBeforeMount(() => {
+      store.dispatch("getTodos");
+    });
 
     return { addTodoHandler };
   },
