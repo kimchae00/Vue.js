@@ -213,7 +213,7 @@ const btnCheckUid = () => {
   loading.value = true;
 
   axios
-    .get("http://localhost:8080/Voard/user/countUid", {
+    .get("http://13.125.199.85:8484/Voard/user/countUid", {
       params: { uid: user.uid },
     })
     .then((response) => {
