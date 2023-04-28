@@ -89,7 +89,7 @@ const pageHandler = () => {
 
 const getArticles = (pg) => {
   axios
-    .get("http://13.125.199.85:8484/Voard/list?pg=" + pg)
+    .get("/api/list?pg=" + pg)
     .then((response) => {
       console.log(response);
       const data = response.data;

@@ -47,7 +47,7 @@ const user = computed(() => userStore.getters.user);
 
 onBeforeMount(() => {
   axios
-    .get("http://13.125.199.85:8484/Voard/view")
+    .get("/api/view")
     .then((response) => {
       console.log(response);
       const data = response.data;

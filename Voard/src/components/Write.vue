@@ -72,7 +72,7 @@ const btnWrite = () => {
   article.uid = user.uid;
 
   axios
-    .post("http://13.125.199.85:8484/Voard/write", article)
+    .post("/api/write", article)
     .then((response) => {
       console.log(response);
       if (response.data > 0) {
